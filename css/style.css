@@ -1,0 +1,205 @@
+/*== UNIVERSAL STYLING ===================================================================================================================*/
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+body, html {
+  overflow: hidden;
+  background-image: url(../images/bkgd.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: local;
+  font-family: 'Quicksand', sans-serif;
+  font: 100%;
+  color: #000
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+h1{
+  color: #bd132c;
+  font-weight: 300;
+  font-size: 4em
+}
+
+h5{
+  color: black;
+  font-weight: 400;
+  font-size: 1.5em
+}
+
+/*== PARALLAX EFFECT +++==================================================================================================================*/
+
+.parallax {
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-perspective-origin-x: 100%;
+  perspective-origin-x: 100%;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform-origin-x: 100%;
+  transform-origin-x: 100%;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 2;
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 1;
+}
+
+.parallax__layer--last{
+  z-index: 3
+}
+
+/*== SECTION STYLING =====================================================================================================================*/
+
+.top {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.base {
+  width: 100%
+}
+
+.back {
+  background-color: rgba(255, 255, 255, 0.85);
+  height: 80vh;
+  width: 100%
+}
+
+.gallery {
+  width: 100%;
+  height: 70vh;
+  margin: 0px;
+  overflow: auto;
+}
+
+.gallery ul {
+  float: left;
+  margin-right: -999em;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.gallery li {
+  text-align: center;
+  float: left;
+  display: inline;
+}
+
+.gallery img {
+  border: 0px;
+  height: 50vh;
+  display: block;
+}
+
+.gallery a, a:active img, .gallery a:focus img, .gallery a:hover img {
+  height: 55vh;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.gallery a:active, .gallery a:focus, .gallery a:hover {
+  font-weight: 700;
+}
+
+.gallery span {
+padding:5px 0 0;
+display:block;
+}
+
+/* -- MAIN ---------------------------------------*/
+#main {
+  z-index: 3;
+  height: 200vh;
+  top: -50vh;
+  position: relative;
+}
+
+#main .parallax__layer--base {
+
+}
+
+.name{
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 100%;
+}
+
+
+/* -- WEB DEV ------------------------------------*/
+
+#webdev {
+  z-index: 2; /* slide under groups 1 and 3 */
+  height: 200vh;
+  top: -50vh
+}
+
+#webdev .parallax__layer--back {
+
+}
+
+/* -- GRAPHIC DESIGN ---------------------------*/
+#graphdes {
+  z-index: 3; /* slide under groups 1 and 3 */
+  height: 200vh;
+  top: -50vh
+}
+
+#graphdes .parallax__layer--base {
+
+}
+/* -- BIO --------------------------------------*/
+#bio {
+  z-index: 3; /* slide under groups 1 and 3 */
+  height: 200vh;
+  top: -50vh
+}
+
+.bio {
+  width: 100%;
+  height: 70vh;
+  margin: 0px;
+  overflow: auto;
+}
+
+/* -- CONTACT ----------------------------------*/
+#contact {
+  z-index: 3; /* slide under groups 1 and 3 */
+}
+
+#contact .parallax__layer--base {
+
+}
