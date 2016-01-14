@@ -11,7 +11,7 @@ body, html {
   background-size: cover;
   background-attachment: local;
   font-family: 'Quicksand', sans-serif;
-  font: 100%;
+  font-weight: 400;
   color: #000
 }
 
@@ -31,10 +31,24 @@ h5{
   font-size: 1.5em
 }
 
+p {
+
+}
+
+a {
+  color: #c4757c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #bd132c;
+}
+
 /*== PARALLAX EFFECT +++==================================================================================================================*/
 
 .parallax {
-  height: 500px; /* fallback for older browsers */
+  height: 500px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -46,7 +60,7 @@ h5{
 
 .parallax__group {
   position: relative;
-  height: 500px; /* fallback for older browsers */
+  height: 500px;
   height: 100vh;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -75,7 +89,7 @@ h5{
 }
 
 .parallax__layer--last{
-  z-index: 3
+  z-index: 4
 }
 
 /*== SECTION STYLING =====================================================================================================================*/
@@ -87,9 +101,11 @@ h5{
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
 }
 
 .base {
+  height: 70vh;
   width: 100%
 }
 
@@ -101,7 +117,7 @@ h5{
 
 .gallery {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   margin: 0px;
   overflow: auto;
 }
@@ -121,12 +137,12 @@ h5{
 
 .gallery img {
   border: 0px;
-  height: 50vh;
+  height: 45vh;
   display: block;
 }
 
 .gallery a, a:active img, .gallery a:focus img, .gallery a:hover img {
-  height: 55vh;
+  height: 50vh;
   text-decoration: none;
   font-weight: 400;
 }
@@ -142,9 +158,7 @@ display:block;
 
 /* -- MAIN ---------------------------------------*/
 #main {
-  z-index: 3;
-  height: 200vh;
-  top: -50vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -152,19 +166,16 @@ display:block;
 
 }
 
-.name{
-  z-index: 4;
+.name {
   background-color: rgba(255, 255, 255, 0.85);
   width: 100%;
 }
 
-
 /* -- WEB DEV ------------------------------------*/
 
 #webdev {
-  z-index: 2; /* slide under groups 1 and 3 */
-  height: 200vh;
-  top: -50vh
+  height: 100vh;
+  top: 100vh
 }
 
 #webdev .parallax__layer--back {
@@ -173,9 +184,8 @@ display:block;
 
 /* -- GRAPHIC DESIGN ---------------------------*/
 #graphdes {
-  z-index: 3; /* slide under groups 1 and 3 */
-  height: 200vh;
-  top: -50vh
+  height: 100vh;
+  top: 200vh
 }
 
 #graphdes .parallax__layer--base {
@@ -183,21 +193,27 @@ display:block;
 }
 /* -- BIO --------------------------------------*/
 #bio {
-  z-index: 3; /* slide under groups 1 and 3 */
-  height: 200vh;
-  top: -50vh
+  height: 100vh;
+  top: 300vh
 }
 
-.bio {
-  width: 100%;
+.biography {
   height: 70vh;
   margin: 0px;
   overflow: auto;
+  text-align: left;
+  padding: 2%;
+}
+
+#bio img {
+  float: left;
+  margin: 10px;
 }
 
 /* -- CONTACT ----------------------------------*/
 #contact {
-  z-index: 3; /* slide under groups 1 and 3 */
+  height: 100vh;
+  top: 400vh
 }
 
 #contact .parallax__layer--base {
