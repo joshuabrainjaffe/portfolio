@@ -198,16 +198,19 @@ display:block;
 }
 
 .biography {
-  height: 70vh;
-  margin: 0px;
-  overflow: auto;
-  text-align: left;
+  float: right;
+  width: 75%;
+  height: 60vh;
   padding: 2%;
+  text-align: left;
 }
 
-#bio img {
+#bio .back img {
+  position: relative;
   float: left;
-  margin: 10px;
+  top: 15%;
+  left: 2%;
+  width: 20%
 }
 
 /* -- CONTACT ----------------------------------*/
@@ -217,5 +220,42 @@ display:block;
 }
 
 #contact .parallax__layer--base {
+
+}
+
+/* -- RESPONSIVE -------------------------------*/
+
+@media (max-width: 1050px) and (min-width: 740px){
+
+  .biography {
+    font-size: .85em;
+  }
+
+}
+
+@media (max-width: 740px) {
+
+  #bio .back img {
+    float: none;
+    left: 0px;
+    top: -5vh
+
+  }
+
+  #bio .top .base{
+    top: 50vh;
+  }
+
+  #bio h2 {
+    color: white
+  }
+
+  .biography {
+    font-size: .75em;
+    float: none;
+    margin-top: 10vh;
+    width: 98%;
+    height: 60vh;
+  }
 
 }
